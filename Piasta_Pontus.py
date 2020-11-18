@@ -7,3 +7,4 @@ def fibonacci(max):
 
 for n in fibonacci(1000):
     print (n)
+    print('Dziala')
