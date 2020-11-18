@@ -11,3 +11,4 @@ for n in fibonacci(1000):
 
 x='test'
 print(x)
+print(123)
