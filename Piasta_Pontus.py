@@ -23,9 +23,14 @@ def tor():
     #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
 tor()
 
+#print('Wyniki') 17.12.2020r.
+
 #wykres (17.12.2020r.)
 #plt.plot(x,y,color='r', lw=1, ls='-', label='wzorek')
 #plt.legend()
 #plt.xlabel('X', fontsize = 8)
 #plt.ylabel('f(x)', fontsize = 8)
 #plt.show()
+
+
+#Zapis do pliku (17.12.2020r.)
