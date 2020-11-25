@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 #h=int(h)... itd...
 #h-wysokość początkowa, v0-prędkość początkowa, a-kąt rzutu, g-z pliku zew.,
 
-#plik = np.loadtxt('plik.dat')(tworzenie pliku ze wzorami 10.12.2020r.)
+#plik = np.loadtxt('plik.py')(tworzenie pliku ze wzorami 10.12.2020r.)
 
 def zasieg():
     #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
