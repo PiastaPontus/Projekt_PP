@@ -1,14 +1,31 @@
+#Modelowanie - projekt, Nikodem Piasta, Robert Pontus
+#Modelownie rzutu poziomego w polu grawitacyjnym.
 
-def fibonacci(max):
-    a, b = 0, 1
-    while a < max:
-        yield a
-        a, b = b, a+b
+import numpy as np
+import matplotlib.pyplot as plt
 
-for n in fibonacci(1000):
-    print (n)
-    print('Dziala')
+#Pobieranie danych od użytkownika (03.12.2020r.)
+#h=input('h')
+#h=int(h)... itd...
+#h-wysokość początkowa, v0-prędkość początkowa, a-kąt rzutu, g-z pliku zew.,
 
-x='test'
-print(x)
-print(123)
+#plik = np.loadtxt('plik.dat')(tworzenie pliku ze wzorami 10.12.2020r.)
+
+def zasieg():
+    #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
+zasieg()
+
+def czas():
+    #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
+czas()
+
+def tor():
+    #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
+tor()
+
+#wykres (17.12.2020r.)
+#plt.plot(x,y,color='r', lw=1, ls='-', label='wzorek')
+#plt.legend()
+#plt.xlabel('X', fontsize = 8)
+#plt.ylabel('f(x)', fontsize = 8)
+#plt.show()
