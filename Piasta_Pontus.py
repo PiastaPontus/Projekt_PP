@@ -4,24 +4,36 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#Pobieranie danych od użytkownika (03.12.2020r.)
-#h=input('h')
-#h=int(h)... itd...
-#h-wysokość początkowa, v0-prędkość początkowa, a-kąt rzutu, g-z pliku zew.,
+print ('Oto program do symulacji ruchu poziomego z pewnej wysokośći H o danej prędkości początkowej V')
+
+while True:
+    try:
+        h = float(input('Proszę podaj wysokość początkową ciała w metrach:'))
+        break
+    except ValueError:
+        print("Wprowadzono błędny typ danych, spróbuj jeszcze raz")
+while True:
+    try:
+        v = float(input('Proszę podaj wartość prędkości początkowej [m/s]:'))
+        break
+    except ValueError:
+        print("Wprowadzono błędny typ danych, spróbuj jeszcze raz")
 
 #plik = np.loadtxt('plik.py')(tworzenie pliku ze wzorami 10.12.2020r.)
+g=9.81 # to bedzie w pliku zew.
+print('Dane: wysokość - h=',h,'[m]\n prędkość początkowa: v=',v, '[m/s]\n przyspieszenie ziemskie - g=',g,'[m/s^2]')
 
-def zasieg():
+#def zasieg():
     #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
-zasieg()
+#zasieg()
 
-def czas():
+#def czas():
     #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
-czas()
+#czas()
 
-def tor():
+#def tor():
     #f-cje (10.12.2020r. - implementacja pliku ze wzorem)
-tor()
+#tor()
 
 #print('Wyniki') 17.12.2020r.
 
