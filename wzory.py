@@ -1,6 +1,5 @@
-import math
 g = 9.81
-g=int(g)
+g = int(g)
 
 zasieg = v * math.sqrt(2*h/g)
 czas = math.sqrt(2*h/g)
