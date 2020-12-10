@@ -1,7 +1,5 @@
 import math
 g = 9.81
-v =1
-h=1
 
 zasieg = v * math.sqrt(2*h/g)
 czas = math.sqrt(2*h/g)
