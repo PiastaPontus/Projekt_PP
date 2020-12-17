@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import math
+import wzory
 
 print('Oto program do symulacji ruchu poziomego z pewnej wysokośći H o danej prędkości początkowej V')
 
@@ -21,12 +22,20 @@ while True:
     except ValueError:
         print("Wprowadzono błędny typ danych, spróbuj jeszcze raz")
 
-plik = open('wzory.py','r')
 
-print('Dane: wysokość - h=', h, '[m]\n prędkość początkowa: v=', v, '[m/s]\n przyspieszenie ziemskie - g=', g,
-      '[m/s^2]')
+print('Dane:\n wysokość - h=', h, '[m]\n prędkość początkowa: v=', v, '[m/s]\n przyspieszenie ziemskie - g=', (wzory.g), '[m/s^2]\n\n')
 
-plik.close()
+print ('Czas lotu ciała wyniósł: ',(wzory.czas(h)),'[s]')
+print ('Zasięg lotu wyniósł: ',(wzory.zasieg(v,h)),'[m]')
+print ('Równanie toru ruchu ma postać: ',(wzory.rownanie(v,h)))
+
+
+
+
+
+
+
+
 
 #print(czas)
 #print(zasieg)
