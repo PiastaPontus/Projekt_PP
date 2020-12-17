@@ -40,5 +40,4 @@ plt.ylabel('f(x)', fontsize = 8)
 plt.show()
 
 
-# Zapis do pliku (17.12.2020r.)
-# np.savetxt('wyniki.dat',a)
+np.savetxt('wyniki.dat',a)
