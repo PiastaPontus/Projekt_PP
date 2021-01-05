@@ -38,6 +38,7 @@ plt.ylim(0)
 plt.legend()
 plt.xlabel('Odległość', fontsize = 8)
 plt.ylabel('f(x)', fontsize = 8)
+plt.savefig('wykres.jpg', dpi = 300)
 plt.show()
 
 
