@@ -75,7 +75,6 @@ for val in x:
 for val in y:
     normal_y.append(new_h* (val - y[len(y)-1])/ ( y[0] - y[len(y)-1]))
 
-
 root = Tk()
 root.title("Animacja")
 root.configure(width=int(700 * aspect) + 100, height=770)
@@ -99,6 +98,5 @@ def clock():
     if(i<len(x)):
         root.after(20, clock)
 clock()
-
 
 root.mainloop()
