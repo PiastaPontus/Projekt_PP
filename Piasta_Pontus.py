@@ -31,13 +31,14 @@ print ('Zasięg lotu wyniósł: ',round((wzory.zasieg(v,h)),3),'[m]')
 print ('Równanie toru ruchu ma postać: ',(wzory.rownanie(v,h)))
 
 
-x=np.arange(0,10)
-y= h - ((9,81 * (x**2)) / (2*(v**2)))
-plt.plot(x,y, color='r', lw=1, ls='-', label='wzorek')
+x=np.arange(0,10) #JAkoś tutaj przeskalować
+y= h - ((9.81 * (x**2)) / (2*(v**2)))
+plt.plot(x,y, color='r', lw=1, ls='-', label='Tor ruchu ciała')
+plt.ylim(0)
 plt.legend()
-plt.xlabel('X', fontsize = 8)
+plt.xlabel('Odległość', fontsize = 8)
 plt.ylabel('f(x)', fontsize = 8)
 plt.show()
 
 
-np.savetxt('wyniki.dat',a)
+#np.savetxt('wyniki.dat',a)
