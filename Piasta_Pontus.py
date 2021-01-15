@@ -61,6 +61,7 @@ plt.show()
 x = np.linspace(float(0), float(zasieg + zasieg * 0.05), num=500)
 y = h - ((9.81 * (x ** 2)) / (2 * (v ** 2)))
 
+#proporcja paraboli do wyskalowania okna
 aspect = zasieg / h
 
 new_h = 700
@@ -68,35 +69,41 @@ new_w = int(700*aspect)
 print(new_w)
 normal_x = []
 normal_y = []
-
+#normalizacja danych by pasowały do wyskalowanego okna
 for val in x:
     normal_x.append(new_w* (val - 0 )/ (x[len(x)-1]))
 
 for val in y:
     normal_y.append(new_h* (val - y[len(y)-1])/ ( y[0] - y[len(y)-1]))
 
+#Okienko - włączenie, nazwa, wymiary, kolor...
 root = Tk()
 root.title("Animacja")
 root.configure(width=int(700 * aspect) + 100, height=770)
 canvas = Canvas(root, width=int(700 * aspect) + 40, height=740,bg='grey')
 canvas.place(x=20, y=20)
+#gdzie zaczyna piłka
 X = normal_x[0]
 Y = normal_y[0]
-ball = canvas.create_oval(X - 20+100, Y + 20, X + 20+100, Y - 20, fill="red")
+ball = canvas.create_oval(X - 20+100, Y + 20, X + 20+100, Y - 20, fill="red") #tworzenie piłki
+#rysowanie paraboli (seria prostych między punktami)
 for i in range(len(normal_x) - 1):
     canvas.create_line(normal_x[i], 700 - normal_y[i], normal_x[i + 1], 700 - normal_y[i + 1])
-
+#zmienna do licznie poruszen kółka
 i = 1
+#przesuwanie kółka
 def move():
     global i
     canvas.coords(ball, normal_x[i], 700 - normal_y[i], normal_x[i]+40, 700 - normal_y[i] + 40)
     i += 1
     pass
-
+#zegar (czas) przesunięcia kółka
 def clock():
     move()
     if(i<len(x)):
         root.after(20, clock)
+    else:
+        return
 clock()
 
 root.mainloop()
